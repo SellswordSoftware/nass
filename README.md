@@ -6,6 +6,8 @@ It is a small CSS package for foundation styles, semantic tokens, theme definiti
 
 It is not a component library, not a full design system, and not a place for product-specific layout or feature styling.
 
+The repo also ships a plain ESM runtime at `./naf.js` with colocated TypeScript declarations in `./naf.d.ts` so it can be consumed directly from a git submodule without a build step.
+
 ## Quick start
 
 Install or vendor the repo, then import the entrypoints you need:
@@ -48,6 +50,24 @@ If your app uses the optional icon mask variables, also load:
 - `src/entries/primitives.css`: reusable primitive classes only
 - `src/entries/index.css`: foundation plus primitives
 - `src/entries/icons.css`: optional icon mask variables
+- `naf.js`: plain JS runtime helpers
+- `naf.d.ts`: TypeScript declarations for `naf.js`
+
+## Runtime usage
+
+Package subpath import:
+
+```js
+import { signal, template, mount } from "nass/naf";
+```
+
+Direct git submodule import:
+
+```js
+import { signal, template, mount } from "../vendor/nass/naf.js";
+```
+
+TypeScript will pick up the colocated `naf.d.ts` file for the direct file import as long as your resolver supports standard ESM module declarations.
 
 ## Theme activation
 

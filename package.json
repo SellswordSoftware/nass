@@ -6,6 +6,8 @@
   "type": "module",
   "style": "./src/entries/index.css",
   "files": [
+    "naf.js",
+    "naf.d.ts",
     "src",
     "docs",
     "demo",
@@ -14,6 +16,15 @@
   ],
   "exports": {
     ".": "./src/entries/index.css",
+    "./naf": {
+      "types": "./naf.d.ts",
+      "default": "./naf.js"
+    },
+    "./naf.js": {
+      "types": "./naf.d.ts",
+      "default": "./naf.js"
+    },
+    "./naf.d.ts": "./naf.d.ts",
     "./index.css": "./src/entries/index.css",
     "./foundation.css": "./src/entries/foundation.css",
     "./primitives.css": "./src/entries/primitives.css",
