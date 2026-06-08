@@ -22,7 +22,8 @@
     "./themes/dark.css": "./src/themes/dark.css"
   },
   "scripts": {
-    "demo": "python3 -m http.server 4174 -d demo"
+    "demo:build": "node ./scripts/stage-demo-site.mjs",
+    "demo": "node ./scripts/stage-demo-site.mjs && python3 -m http.server 4174 -d .site"
   },
   "keywords": [
     "css",

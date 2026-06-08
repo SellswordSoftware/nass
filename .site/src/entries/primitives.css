@@ -1,0 +1,11 @@
+@import url("../primitives/alert.css") layer(primitives);
+@import url("../primitives/badge.css") layer(primitives);
+@import url("../primitives/button.css") layer(primitives);
+@import url("../primitives/card.css") layer(primitives);
+@import url("../primitives/eyebrow.css") layer(primitives);
+@import url("../primitives/form.css") layer(primitives);
+@import url("../primitives/icon-mask.css") layer(primitives);
+@import url("../primitives/menu.css") layer(primitives);
+@import url("../primitives/modal.css") layer(primitives);
+@import url("../primitives/panel.css") layer(primitives);
+@import url("../primitives/spinner.css") layer(primitives);
