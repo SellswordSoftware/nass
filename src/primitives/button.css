@@ -1,0 +1,81 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 2rem;
+  padding-inline: 0.875rem;
+  border: var(--border) solid var(--_btn-border, var(--color-border-soft));
+  border-radius: var(--radius-field);
+  background: var(--_btn-bg, transparent);
+  color: var(--_btn-fg, var(--color-base-content));
+  box-shadow: var(--_btn-shadow, none);
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease,
+    transform 120ms ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  border-color: var(--_btn-hover-border, var(--color-border-soft));
+  background: var(--_btn-hover-bg, var(--color-hover-subtle));
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  --_btn-bg: var(--color-primary);
+  --_btn-fg: var(--color-primary-content);
+  --_btn-border: var(--color-btn-primary-border);
+  --_btn-hover-bg: var(--color-btn-primary-hover-bg);
+}
+
+.btn-secondary {
+  --_btn-bg: var(--color-secondary);
+  --_btn-fg: var(--color-secondary-content);
+  --_btn-border: var(--color-btn-secondary-border);
+  --_btn-hover-bg: var(--color-btn-secondary-hover-bg);
+}
+
+.btn-ghost {
+  --_btn-bg: transparent;
+  --_btn-shadow: none;
+  --_btn-border: transparent;
+  --_btn-hover-bg: var(--color-hover-bg);
+}
+
+.btn-outline {
+  --_btn-bg: transparent;
+  --_btn-fg: var(--color-primary);
+  --_btn-border: var(--color-primary);
+  --_btn-hover-bg: var(--color-hover-card);
+}
+
+.btn-danger {
+  --_btn-fg: var(--color-danger-text);
+  --_btn-border: var(--color-danger-border);
+  --_btn-hover-border: var(--color-danger-hover-border);
+  --_btn-hover-bg: var(--color-danger-bg);
+}
+
+.btn-sm {
+  min-height: 1.9rem;
+  padding-inline: 0.7rem;
+  font-size: var(--text-support);
+}
+
+.btn-square {
+  width: 1.9rem;
+  min-width: 1.9rem;
+  padding-inline: 0;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
